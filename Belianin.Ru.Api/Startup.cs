@@ -1,14 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace belianin.ru
+namespace Belianin.Ru.Api
 {
     public class Startup
     {
@@ -26,6 +22,10 @@ namespace belianin.ru
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+            app.UseDefaultFiles();
+            
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
