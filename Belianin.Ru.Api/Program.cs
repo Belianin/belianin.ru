@@ -15,7 +15,7 @@ namespace Belianin.Ru.Api
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>()
-                        .UseUrls("http://locahost:80", "https://localhost:8080");
+                        .UseUrls("https://locahost");
                 });
     }
 }
