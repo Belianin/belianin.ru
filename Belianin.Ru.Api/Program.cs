@@ -15,6 +15,12 @@ namespace Belianin.Ru.Api
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>()
+                        .ConfigureKestrel(o =>
+                        {
+                            o.ConfigureHttpsDefaults(https =>
+                            {
+                            });
+                        })
                         .UseUrls("https://locahost");
                 });
     }
